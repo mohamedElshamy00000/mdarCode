@@ -1,0 +1,41 @@
+{
+    "name": "hexadog/laravel-theme-installer",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/hexadog/laravel-theme-installer/issues",
+        "source": "https://github.com/hexadog/laravel-theme-installer"
+    },
+    "authors": [
+        {
+            "name": "Gaetan",
+            "email": "gaetan@hexadog.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Hexadog\\LaravelThemeInstaller\\": "src/"
+        },
+        "psr-4": {
+            "Hexadog\\LaravelThemeInstaller\\": "src"
+        }
+    },
+    "extra": {
+        "class": "Hexadog\\LaravelThemeInstaller\\ThemeInstallerPlugin"
+    },
+    "require-dev": {
+        "composer/composer": "^1.3|^2.7.7",
+        "mockery/mockery": "^1.4",
+        "phpunit/phpunit": "^7.0|^8.0|^9.0"
+    },
+    "require": {
+        "composer-plugin-api": "^1.1|^2.0",
+        "php": "^7.3|^8.0"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test:windows": "vendor\\bin\\phpunit",
+        "check-style": "vendor/bin/phpcs --extensions=php ./src",
+        "fix-style": "vendor/bin/phpcbf --extensions=php ./src"
+    }
+}
